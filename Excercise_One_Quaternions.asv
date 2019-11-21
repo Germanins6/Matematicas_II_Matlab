@@ -1,0 +1,19 @@
+angle = 20
+q1 = [cosd(20) (-1*sind(20)/sqrt(5)) 2*sind(20)/sqrt(5) 0]'
+
+%%Comprobar norma 1
+q1'*q1
+
+
+
+
+
+%%Cogemos parte escalar
+acosd(.69)
+%^Coon este angulo podemos calcular seno
+ans*2
+
+%%Esto lo podemos dividir entre la parte vectorial 
+v = sind(ans/2)
+
+q3 
