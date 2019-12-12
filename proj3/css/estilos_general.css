@@ -1,0 +1,162 @@
+@charset "utf-8";
+body{
+	font-size:14px;
+	font-family:Verdana, Arial;
+	
+}
+
+header{
+	display:none;
+	font-family:Century Gothic;
+}
+
+
+.navbar-brand{
+	display:block;
+
+}
+
+#logo_menu{
+	width:200px;
+	margin-top:-12px;
+	margin-left:-8px;
+}
+
+.container-fluid>.navbar-collapse, .container-fluid>.navbar-header, .container>.navbar-collapse, .container>.navbar-header {
+	height:60px;
+}
+
+
+#myNavbar{
+	height:auto;
+	background-color:#58ACFA;
+}
+
+
+.navbar-toggle {
+	margin-top:14px;
+}
+
+
+
+.navbar-inverse{
+	border-radius:0px;
+	border:0px;
+	background-color:#58ACFA;
+	
+}
+
+
+
+.navbar-inverse .navbar-nav>li>a:focus, .navbar-inverse .navbar-nav>li>a{
+	color:white;
+	font-weight:bold;
+}
+
+
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover{
+	background-color:#F6F590;
+	color:#58ACFA;
+}
+
+.navbar-inverse .navbar-nav>li>a:focus, .navbar-inverse .navbar-nav>li>a:hover{
+	background-color:#F6F590;
+	color:#58ACFA;
+	
+}
+
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+	border-color:white;
+}
+#pie{
+	background-color:#58ACFA;
+	height:300px;
+	padding-top:30px;
+	padding-bottom:30px;
+	color:white;
+	text-align:center;
+	font-size:14px;
+	font-weight:bold;
+}
+
+#cuerpo{
+	background-color:white;
+	margin-top:-20px;
+	padding-top:30px;
+	padding-bottom:40px;
+	padding-left:0px;
+	padding-right:0px;
+}
+
+.row{
+	margin:0px;
+}
+
+.text-center{
+	text-align:center;
+}
+
+
+@media (min-width: 768px){
+	
+
+
+header{
+	display:block;
+	height:150px;
+	margin-right:15px;
+	background-color:#F6F590;
+	color:white;
+	padding:20px;
+	border-bottom:4px solid white;
+}
+
+.menup{
+	padding-left:auto;
+	padding-right:auto;
+	
+}
+.navbar-inverse{
+	background-color:#58ACFA;	
+}
+
+#myNavbar{
+	width:600px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.navbar-brand{
+	display:none;
+}
+
+.container-fluid>.navbar-collapse, .container-fluid>.navbar-header, .container>.navbar-collapse, .container>.navbar-header {
+	height:50px;
+}
+
+#logotipo{
+	margin-right:20px;
+	width:400px;
+	height:auto;
+}
+
+#cuerpo{
+	padding-top:60px;
+	padding-bottom:100px;
+}
+
+#pie{
+	padding-top:50px;
+	padding-bottom:50px;
+	height:200px;
+}
+
+
+
+}
+
+@media (min-width: 1200px){
+	
+
+}/* CSS Document */
+

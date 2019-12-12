@@ -1,0 +1,144 @@
+
+@import url('https://www.dafont.com/es/hardwell.font');
+@import url('https://www.dafont.com/es/violina.font');
+@font-face{
+    font-family: "Hardwell";
+     src: url("Hardwell.ttf");
+}
+@font-face{
+    font-family: "Violina";
+     src: url("Violina Regular");
+}
+
+
+
+
+
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+    top: 20px;
+  margin-bottom: 60px;
+    background-color: white;
+    background-image: url("https://www.cirquedusoleil.com/-/media/cds/images/shows/axel/hero/1920x710v5.jpg?db=web&la=es&vs=1&hash=100BBD414FA4EA0A8962A4B98A8DBE4960D01566");
+    background-repeat: no-repeat;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  line-height: 60px; /* Vertically center the text there */
+  background-color: #f5f5f5;
+}
+
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+
+/* mt arriba mb abajo*/
+
+
+body > .container {
+  /*padding: 60px 15px 0;*/
+}
+
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+code{
+  font-size: 80%;
+}
+
+
+.jumbotron {
+    
+    
+   background-color: black;
+    color: darkred; 
+    
+    text-align: center;
+}
+
+
+
+
+
+
+.col-md-4 {
+    
+    text-align: center;
+    font-size: 15px;
+
+
+}
+
+
+
+
+.esquerra{
+    
+    text-align: left;
+}
+
+
+
+.letra2 {
+    
+    font-family:"Arial";
+    font-size: 60px;
+    text-align: center;
+    color: orange;
+    background-color: black;
+    padding-top: 1px;
+
+}
+
+.recomendacion {
+    
+    font-size: 50px;
+    text-align: center;
+    color: white; 
+    vertical-align: baseline;
+    
+
+
+    
+    background-color: black;
+}
+
+
+.oculto{
+    display: none;
+    background-color:rgba(0,0,0,0.5);
+}
+
+
+
+
+
+letra1{
+   
+    
+}
+
+
+
+
+
+
+
+
+
+
