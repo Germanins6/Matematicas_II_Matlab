@@ -33,9 +33,15 @@ omega = acosd(dot(qt0,qt1))
 attitude = qt0 * sind(1-t)*omega/sind(omega) + qt1 *(sind(t*omega)/sind(omega))
 
 
+%% Exercise 5
 
+wp = [19.5; 205; 0]
+angle = -80;
 
+Ux = [0 0 0; 0 0 -1; 0 1 0]
+mRw = eye(3)+ sind(angle)*Ux+(1-cosd(angle))*Ux^2
 
+mdmw = mRw * -wp
 
-
+%mRwAff = [wRm 
 
