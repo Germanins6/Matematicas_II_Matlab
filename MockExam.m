@@ -2,8 +2,6 @@
 
 
 
-
-
 %% Excercise 2
 
 R40 = [0.8830 -0.4545 0.1170; 0.4545 0.7660 -0.4545; 0.1170 0.4545 0.8830];
@@ -68,13 +66,77 @@ attitude = qt0 * sind(1-t)*omega/sind(omega) + qt1 *(sind(t*omega)/sind(omega))
 
 %% Exercise 5
 
-wp = [19.5; 205; 0]
-angle = -80;
 
-Ux = [0 0 0; 0 0 -1; 0 1 0]
-mRw = eye(3)+ sind(angle)*Ux+(1-cosd(angle))*Ux^2
+wp = [19.5 205 0]';
 
-mdmw = mRw * -wp
+yaw = 90;
+pitch = -90;
+roll = 0;
 
-%mRwAff = [wRm 
+vRm = [(cosd(pitch)*cosd(yaw)) (cosd(yaw)*sind(pitch)*sind(roll) - cosd(roll)*sind(yaw)) (cosd(yaw)*cosd(roll)*sind(pitch) + sind(yaw)*sind(roll));
+    (cosd(pitch)*sind(yaw)) (sind(yaw)*sind(pitch)*sind(roll) + cosd(roll)*cosd(yaw)) (cosd(roll)*sind(yaw)*sind(pitch) - cosd(yaw)*sind(roll));
+    (-sind(pitch)) (cosd(pitch)*sind(roll)) (cosd(pitch)*cosd(roll))];
+
+dmv = [0 1.7 0]';
+
+vAm = [vRm dmv; 0 0 0 1] % a) solution
+
+mRw = [cosd(-80) sind(-80) 0; -sind(-80) cosd(-80) 0; 0 0 1];
+mw = mRw * -wp;
+mAw = [mRw mw; 0 0 0 1] % b) solution
+
+%% Exercise 6
+
+p1 = [0.91 1.94 3.33];
+p2 = [3.72 2.88 4.44];
+p3 = [1.97 1.0 3.26];
+p4 = [2.67 3.82 4.51];
+
+R = [p1' p2' p3' p4']
+
+f = 1/30;
+
+
+%% Example Angle/Axis exercise
+
+R = eye(3);
+Ux = [0 -1 0; 1 0 0; 0 0 0]
+
+Rotation = eye(3) + sind(90)*Ux + (1-cosd(90))*Ux^2;
+
+R_Rotated = R*Rotation
+
+%% Inverse Maping Rotation Matrix to Angle/Axis
+
+R = [0 -1 0; 1 0 0; 0 0 1];
+
+angle = acosd((trace(R)-1)/2)
+Ux = (R-R')/2*sind(angle);
+
+axis = [Ux(3,2) Ux(1,3) Ux(2,1)]
+
+%% LOL Exercise
+
+kRw = [cosd(-90) sind(-90); -sind(-90) cosd(-90)] %World seen from Kalista
+wRk = kRw'   %Kalista seen from world
+
+sRw = [cosd(30) sind(30); -sind(30) cosd(30)]   %Sentinel seen from world
+wRs = sRw'  %World Seen from Sentinel
+
+sRk = [cosd(120) sind(120); -sind(120) cosd(120)] %Sentinel seen from Kalista
+kRs = sRk' %Kalista seen from Sentinel
+
+sP0 = [-120 -40]'
+Wddk = [130 0]'
+
+kP0 = -kRs * sP0
+wP0 = wRk * kP0
+
+Wddk + wP0;
+
+wddPk = [130 0];  %Kalista seen from world
+sP3e = [1 3];
+sPk = [-120 -40];
+wP4a = [150 150];
+
 
